@@ -1,5 +1,6 @@
 package com.josphatmwania.hoppyhour.feature_onboarding.presentation.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import com.josphatmwania.hoppyhour.R
 import com.josphatmwania.hoppyhour.databinding.ActivityOnboardingBinding
+import com.josphatmwania.hoppyhour.feature_beer.presentation.ui.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -28,13 +30,17 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun initialize() {
+        val intent = Intent(this, MainActivity::class.java)
         lifecycleScope.launchWhenCreated {
-            viewModel.showOnboarding.collect {
-                Log.d("TAG", "initialize: $it")
+            viewModel.showOnboarding.collect { showOnboarding ->
+                if (!showOnboarding) {
+                    startActivity(intent)
+                }
             }
         }
         binding.btnGetStarted.setOnClickListener {
             viewModel.updateOnboadingState(false, this)
+            startActivity(intent)
         }
     }
 }

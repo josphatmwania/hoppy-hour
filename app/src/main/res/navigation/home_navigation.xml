@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/listOfBeersFragment">
+
+    <fragment
+        android:id="@+id/listOfBeersFragment"
+        android:name="com.josphatmwania.hoppyhour.feature_beer.presentation.ui.fragments.ListOfBeersFragment"
+        android:label="ListOfBeersFragment" >
+        <action
+            android:id="@+id/action_listOfBeersFragment_to_singleBeerFragment"
+            app:destination="@id/singleBeerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleBeerFragment"
+        android:name="com.josphatmwania.hoppyhour.feature_beer.presentation.ui.fragments.SingleBeerFragment"
+        android:label="SingleBeerFragment" >
+        <action
+            android:id="@+id/action_singleBeerFragment_to_listOfBeersFragment"
+            app:destination="@id/listOfBeersFragment" />
+        <argument
+            android:name="beerId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>
