@@ -88,6 +88,9 @@ dependencies {
     // splashScreen
     implementation "androidx.core:core-splashscreen:$splash_screen_version"
 
+    // datastore
+    implementation("androidx.datastore:datastore-preferences:$datastore_version")
+
 }
 
 kapt {
