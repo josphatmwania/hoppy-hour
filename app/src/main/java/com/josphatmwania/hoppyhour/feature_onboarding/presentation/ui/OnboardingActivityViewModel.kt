@@ -1,6 +1,7 @@
 package com.josphatmwania.hoppyhour.feature_onboarding.presentation.ui
 
 import android.content.Context
+import android.os.CountDownTimer
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -20,7 +21,9 @@ class OnboardingActivityViewModel @Inject constructor(
 
     private var _showOnboarding = MutableStateFlow(true)
     val showOnboarding = _showOnboarding.asStateFlow()
-    val showGetStartedButton = ObservableBoolean(false)
+    private var _showGetStartedButton = MutableStateFlow(false)
+    val showGetStartedButton = _showGetStartedButton.asStateFlow()
+
 
     init {
         setValues()
@@ -37,13 +40,18 @@ class OnboardingActivityViewModel @Inject constructor(
             settingsDatastore.preferenceFlow.collect {
                 _showOnboarding.value = it
             }
-            updateButtonVisibility()
         }
     }
 
-    private suspend fun updateButtonVisibility() {
-        delay(3000)
-        showGetStartedButton.set(true)
+    fun updateButtonVisibility() {
+        val timer = object : CountDownTimer(3000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {}
+
+            override fun onFinish() {
+                _showGetStartedButton.value = true
+            }
+        }
+        timer.start()
     }
 
 }
