@@ -8,4 +8,6 @@ object Constants {
     const val CALL_TIMEOUT = 20L
     const val DATABASE_NAME = "hoppy_hour_db"
     const val DATABASE_VERSION = 1
+    const val PAGE_SIZE = 20
+    const val STARTING_POSITION = 1
 }
