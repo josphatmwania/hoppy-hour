@@ -1,6 +1,7 @@
 package com.josphatmwania.hoppyhour.feature_beer.data.dto
 
 import com.google.gson.annotations.SerializedName
+import com.josphatmwania.hoppyhour.feature_beer.domain.model.Beer
 
 data class BeerDto(
     val abv: Double,
@@ -35,3 +36,17 @@ data class BeerDto(
     val volume: VolumeDto
 )
 
+fun BeerDto.toBeer(): Beer {
+    return Beer(
+        id = id,
+        name = name,
+        description = description,
+        tagline = tagline,
+        ibu = ibu,
+        imageUrl = imageUrl,
+        ingredients = ingredients.toIngredients(),
+        foodPairing = foodPairing,
+        volume = volume.toVolume(),
+        brewersTips = brewersTips
+    )
+}
