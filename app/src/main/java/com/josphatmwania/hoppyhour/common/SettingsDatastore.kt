@@ -15,7 +15,7 @@ private val Context.datastore by preferencesDataStore(
 )
 class SettingsDatastore(private val context: Context) {
     companion object {
-        val SHOW_ONBOARDING = booleanPreferencesKey(Constants.SHOW_ONBOARDING)
+        private val SHOW_ONBOARDING = booleanPreferencesKey(Constants.SHOW_ONBOARDING)
     }
 
     suspend fun updateOnboadingState(showOnboarding: Boolean, context: Context) {

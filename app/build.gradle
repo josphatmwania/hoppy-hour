@@ -96,6 +96,8 @@ dependencies {
     // datastore
     implementation("androidx.datastore:datastore-preferences:$datastore_version")
 
+    // paging 3
+    implementation "androidx.paging:paging-runtime:$paging_version"
 }
 
 kapt {

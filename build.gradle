@@ -11,6 +11,7 @@ buildscript {
         hilt_version = "2.44"
         splash_screen_version = "1.0.0"
         datastore_version = "1.0.0"
+        paging_version = "3.1.1"
     }
     dependencies {
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
