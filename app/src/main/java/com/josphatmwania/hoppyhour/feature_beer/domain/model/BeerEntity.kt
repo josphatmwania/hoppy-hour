@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Amount(
-    val unit: String,
-    val value: Double
+data class BeerEntity (
+    @PrimaryKey
+    val id: Long
 )
