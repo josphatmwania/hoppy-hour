@@ -4,17 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="viewModel"
             type="com.josphatmwania.hoppyhour.feature_onboarding.presentation.ui.OnboardingActivityViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/cinnabar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".feature_onboarding.presentation.ui.OnboardingActivity">
 
+        <ProgressBar
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_bg"
+            android:visibility="@{viewModel.showGetStartedButton ? View.GONE : View.VISIBLE}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
+            android:background="@color/white"
+            android:visibility="@{viewModel.showGetStartedButton ? View.VISIBLE : View.GONE}"
             android:minHeight="55dp"
             android:id="@+id/btn_get_started"
             android:layout_width="0dp"
