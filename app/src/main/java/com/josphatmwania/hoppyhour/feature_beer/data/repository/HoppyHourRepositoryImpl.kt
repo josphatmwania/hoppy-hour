@@ -16,14 +16,14 @@ import javax.inject.Inject
 class HoppyHourRepositoryImpl @Inject constructor(
     private val apiService: PunkApiService
 ) : HoppyHourRepository {
-    override suspend fun allBears(page: Int): Flow<PagingData<Beer>> {
+    override suspend fun allBears(): Flow<PagingData<Beer>> {
         return Pager(
             config = PagingConfig(pageSize = Constants.PAGE_SIZE, enablePlaceholders = false),
             pagingSourceFactory = { BeerPagingSource(apiService) }
         ).flow
     }
 
-    override suspend fun findBeer(id: Int): Flow<Beer> {
-        return apiService.findBeer(id).map { it.toBeer() }.asFlow()
+    override suspend fun findBeer(id: Int): Beer {
+        return apiService.findBeer(id)[0].toBeer()
     }
 }

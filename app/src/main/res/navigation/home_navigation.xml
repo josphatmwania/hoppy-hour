@@ -21,7 +21,7 @@
             app:destination="@id/listOfBeersFragment" />
         <argument
             android:name="beerId"
-            app:argType="long"
-            android:defaultValue="0L" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>

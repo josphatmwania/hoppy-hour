@@ -7,4 +7,6 @@
     <string name="onboarding_info">• Search for specific beers by name, style, or brewery.\n\n• Save your favorite beers to your \"Favorites\" list.\n\n• Keep track of the beers you\'ve tried and rate them.</string>
     <string name="beer_name">beer name</string>
     <string name="beer_tagline">beer tagline</string>
+    <string name="textview">TextView</string>
+    <string name="retry">retry</string>
 </resources>

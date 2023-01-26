@@ -4,8 +4,12 @@ import android.content.Context
 import androidx.room.Room
 import com.josphatmwania.hoppyhour.common.Constants
 import com.josphatmwania.hoppyhour.common.SettingsDatastore
+import com.josphatmwania.hoppyhour.common.UseCases
 import com.josphatmwania.hoppyhour.feature_beer.data.datasource.local.HoppyHourDatabase
 import com.josphatmwania.hoppyhour.feature_beer.data.datasource.remote.PunkApiService
+import com.josphatmwania.hoppyhour.feature_beer.domain.repository.HoppyHourRepository
+import com.josphatmwania.hoppyhour.feature_beer.domain.use_case.AllBeers
+import com.josphatmwania.hoppyhour.feature_beer.domain.use_case.FindBeer
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -70,4 +74,18 @@ object AppModule {
     @Provides
     @Singleton
     fun provideHoppyHourDao(database: HoppyHourDatabase) = database.dao()
+
+    @Provides
+    fun provideALlBeersUseCase(repository: HoppyHourRepository) = AllBeers(repository)
+
+    @Provides
+    fun provideFindBeerUseCase(repository: HoppyHourRepository) = FindBeer(repository)
+
+    @Provides
+    fun provideUseCases(allBeers: AllBeers, findBeer: FindBeer): UseCases {
+        return UseCases(
+            allBeers = allBeers,
+            findBeer = findBeer
+        )
+    }
 }
