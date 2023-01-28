@@ -17,23 +17,6 @@ class BeerItemViewModel @Inject constructor(
     private val useCases: UseCases
 ) : ViewModel() {
 
-    private var _beer = MutableStateFlow<BeerEvent?>(null)
-    val beer = _beer.asStateFlow()
 
-    suspend fun findBeer(id: Int) {
-        useCases.findBeer(id).onEach { result ->
-            when(result) {
-                is Resource.Success -> {
-                    _beer.value = BeerEvent(data = result.data)
-                }
-                is Resource.Error -> {
-                    _beer.value = BeerEvent(message = result.message ?: "An unexpected error occurred")
-                }
-                is Resource.Loading -> {
-                    _beer.value = BeerEvent(isLoading = true)
-                }
-            }
-        }.launchIn(viewModelScope)
-    }
 
 }

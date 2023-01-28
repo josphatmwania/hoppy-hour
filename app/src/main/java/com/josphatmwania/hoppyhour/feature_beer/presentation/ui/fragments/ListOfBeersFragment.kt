@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavDirections
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.josphatmwania.hoppyhour.common.navigate
@@ -15,7 +14,9 @@ import com.josphatmwania.hoppyhour.databinding.FragmentListOfBeersBinding
 import com.josphatmwania.hoppyhour.feature_beer.presentation.adapter.BeerLoadStateAdapter
 import com.josphatmwania.hoppyhour.feature_beer.presentation.adapter.BeerPagingAdapter
 import com.josphatmwania.hoppyhour.feature_beer.presentation.ui.viewmodels.ListOfBeersViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ListOfBeersFragment : Fragment() {
     private lateinit var binding: FragmentListOfBeersBinding
     private lateinit var beerAdapter: BeerPagingAdapter

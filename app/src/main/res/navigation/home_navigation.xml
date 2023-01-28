@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listOfBeersFragment"
         android:name="com.josphatmwania.hoppyhour.feature_beer.presentation.ui.fragments.ListOfBeersFragment"
-        android:label="ListOfBeersFragment" >
+        android:label="All Beers" >
         <action
             android:id="@+id/action_listOfBeersFragment_to_singleBeerFragment"
             app:destination="@id/singleBeerFragment" />
@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/singleBeerFragment"
         android:name="com.josphatmwania.hoppyhour.feature_beer.presentation.ui.fragments.SingleBeerFragment"
-        android:label="SingleBeerFragment" >
+        android:label="Single Beer" >
         <action
             android:id="@+id/action_singleBeerFragment_to_listOfBeersFragment"
             app:destination="@id/listOfBeersFragment" />

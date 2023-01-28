@@ -6,7 +6,7 @@ import com.josphatmwania.hoppyhour.feature_beer.domain.model.Beer
 data class BeerDto(
     val abv: Double,
     @SerializedName("attenuation_level")
-    val attenuationLevel: Int,
+    val attenuationLevel: Double,
     @SerializedName("boil_volume")
     val boilVolume: BoilVolumeDto,
     @SerializedName("brewers_tips")
@@ -19,7 +19,7 @@ data class BeerDto(
     val firstBrewed: String,
     @SerializedName("food_pairing")
     val foodPairing: List<String>,
-    val ibu: Int,
+    val ibu: Double,
     val id: Int,
     @SerializedName("image_url")
     val imageUrl: String,
@@ -27,12 +27,12 @@ data class BeerDto(
     val method: MethodDto,
     val name: String,
     val ph: Double,
-    val srm: Int,
+    val srm: Double,
     val tagline: String,
     @SerializedName("target_fg")
-    val targetFg: Int,
+    val targetFg: Double,
     @SerializedName("target_og")
-    val targetOg: Int,
+    val targetOg: Double,
     val volume: VolumeDto
 )
 

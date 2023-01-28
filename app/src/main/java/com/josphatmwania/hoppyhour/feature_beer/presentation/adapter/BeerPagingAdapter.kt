@@ -7,7 +7,6 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.josphatmwania.hoppyhour.R
 import com.josphatmwania.hoppyhour.databinding.ItemBeerBinding
 import com.josphatmwania.hoppyhour.feature_beer.domain.model.Beer
 
@@ -17,19 +16,17 @@ class BeerPagingAdapter(
 
     override fun onBindViewHolder(holder: BeerViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener { getItem(position)?.let { beer -> onCLick(beer) } }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeerViewHolder {
-        val viewHolder = BeerViewHolder(
+        return BeerViewHolder(
             ItemBeerBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
             ), parent.context
         )
-        val position = viewHolder.absoluteAdapterPosition
-        viewHolder.itemView.setOnClickListener { getItem(position)?.let { beer -> onCLick(beer) } }
-        return viewHolder
     }
 
     class BeerViewHolder(private val binding: ItemBeerBinding, private val context: Context) :
@@ -52,7 +49,7 @@ class BeerPagingAdapter(
             }
 
             override fun areContentsTheSame(oldItem: Beer, newItem: Beer): Boolean {
-                return oldItem == newItem
+                return oldItem.name == newItem.name && oldItem.description == newItem.description
             }
         }
     }

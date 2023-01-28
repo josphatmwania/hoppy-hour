@@ -24,14 +24,17 @@ class ListOfBeersViewModel @Inject constructor(
     val allBeers = _allBeers.asStateFlow()
 
     init {
-        viewModelScope.launch { fetchAllBeers() }
+        fetchAllBeers()
     }
 
-    private suspend fun fetchAllBeers() {
-        useCases.allBeers().onEach { beerPagingData ->
-            _allBeers.value = beerPagingData
-        }.cachedIn(viewModelScope)
-            .launchIn(viewModelScope)
+    private fun fetchAllBeers() {
+        viewModelScope.launch {
+            useCases.allBeers()
+                .cachedIn(viewModelScope)
+                .collect {
+                    _allBeers.value = it
+                }
+        }
     }
 
 }
