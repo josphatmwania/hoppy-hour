@@ -8,6 +8,7 @@ data class Beer(
     val description: String,
     val tagline: String,
     val ibu: Double,
+    val abv: Double,
     val imageUrl: String,
     val ingredients: Ingredients,
     val foodPairing: List<String>,

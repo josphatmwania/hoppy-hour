@@ -47,6 +47,7 @@ fun BeerDto.toBeer(): Beer {
         ingredients = ingredients.toIngredients(),
         foodPairing = foodPairing,
         volume = volume.toVolume(),
-        brewersTips = brewersTips
+        brewersTips = brewersTips,
+        abv = abv
     )
 }
