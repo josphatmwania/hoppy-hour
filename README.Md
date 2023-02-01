@@ -16,7 +16,14 @@ It displays three screens as shown in the sketch below.
 * List of Beers and 
 * Single beer details
 
-<img src="https://github.com/josphatmwania/hoppy-hour/Screenshots/hoppy_hour_sketch.png" width="300">
+[comment]: <> (<p>)
+
+[comment]: <> (<img src="./screenshots/day_browse.png" width="300">)
+
+[comment]: <> (<img src="./screenshots/day_details.png" width="300">)
+
+[comment]: <> (</p>)
+<img src="./Screenshots/hoppy_hour_sketch.png" width="300">
 
 ## Requirements
 *   [Android Studio 3.0](https://developer.android.com/studio) and above.
@@ -37,7 +44,7 @@ It displays three screens as shown in the sketch below.
 * Room: SQL database storage library
 
 
-# Support and contact details
+## Support and contact details
 Email: josphatmwania237@gmail.com
 # License
 MIT  [LICENSE](LICENSE) Josphat Mwania 2023
