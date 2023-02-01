@@ -22,7 +22,7 @@ It displays three screens as shown in the sketch below.
     <td>Splash Screen</td>
     <td>On Boarding Screen</td>
      <td>List of Beers</td>
-     <td>Beer Details Screen</td>
+     <td> Single Beer Details Screen</td>
 
   </tr>
   <tr>
