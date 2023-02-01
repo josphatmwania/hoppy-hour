@@ -26,11 +26,11 @@ It displays three screens as shown in the sketch below.
 
   </tr>
   <tr>
-    <td><img src="./Screenshots/Screenshot_splash_screen.png" width=250 height=480></td>
-    <td><img src="./Screenshots/Screenshot_onboarding_screen.png" width=250 height=480></td>
-    <td><img src="./Screenshots/Screenshot_list_of_beers.png" width=250 height=480></td>
-    <td><img src="./Screenshots/Screenshot_1594032232.png" width=250 height=480></td>
-    <td><img src="./Screenshots/Screenshot_single_beer_screen.png" width=250 height=480></td>
+    <td><img src="./Screenshots/Screenshot_splash_screen.png" width=200 height=480></td>
+    <td><img src="./Screenshots/Screenshot_onboarding_screen.png" width=200 height=480></td>
+    <td><img src="./Screenshots/Screenshot_list_of_beers.png" width=200 height=480></td>
+    <td><img src="./Screenshots/Screenshot_1594032232.png" width=200 height=480></td>
+    <td><img src="./Screenshots/Screenshot_single_beer_screen.png" width=200 height=480></td>
 
   </tr>
  </table>
