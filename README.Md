@@ -16,7 +16,7 @@ It displays three screens as shown in the sketch below.
 * List of Beers and 
 * Single beer details
 
-<img src="https://github.com/josphatmwania/hoppy-hour/Screenshots/hoppy_hour_sketch.png">
+<img src="https://github.com/josphatmwania/hoppy-hour/Screenshots/hoppy_hour_sketch.png width="300"">
 
 ## Requirements
 *   [Android Studio 3.0](https://developer.android.com/studio) and above.
@@ -26,8 +26,7 @@ It displays three screens as shown in the sketch below.
 
 ## Features & Libraries
 * Implementation of android  Clean Architecture
-* Dependency injection  Hilt
-* Display list with RecycleView and data binding with  Paging Library.
+*  Display list with RecycleView and data binding with  Paging Library.
 * Managing of asynchronous calls using  Kotlin Coroutines.
 * View-Binding: Accessing xml views
 * Hilt: Dependency Injection framework 
