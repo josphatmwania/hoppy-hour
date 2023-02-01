@@ -16,7 +16,7 @@ It displays three screens as shown in the sketch below.
 * List of Beers and 
 * Single beer details
 
-<img src="https://github.com/josphatmwania/hoppy-hour/Screenshots/hoppy_hour_sketch.png width="300"">
+<img src="https://github.com/josphatmwania/hoppy-hour/Screenshots/hoppy_hour_sketch.png" width="300">
 
 ## Requirements
 *   [Android Studio 3.0](https://developer.android.com/studio) and above.
