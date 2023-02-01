@@ -29,3 +29,7 @@ It displays three screens as shown in the sketch below.
 * Display list with RecycleView and data binding with [Paging Library.]
 * Managing of asynchronous calls using [Kotlin Coroutines.]
 
+# Support and contact details
+Email: josphatmwania237@gmail.com
+# License
+MIT  [LICENSE](LICENSE) Josphat Mwania 2023
