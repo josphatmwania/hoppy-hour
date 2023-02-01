@@ -10,20 +10,25 @@ Hoppy Hour is an Android App that displays beer data from Punk API.
 # Description
 
 I built this app using with Kotlin and implementing Clean Architecture, Coroutines, Data Binding, Dependency Injection
-It displays three screens as shown in the sketch below. 
-* Splash screen
-* Onboarding screen 
-* List of Beers and 
-* Single beer details
+It displays three screens as shown in the sketch below.
 
-[comment]: <> (<p>)
-
-[comment]: <> (<img src="./screenshots/day_browse.png" width="300">)
-
-[comment]: <> (<img src="./screenshots/day_details.png" width="300">)
-
-[comment]: <> (</p>)
 <img src="./Screenshots/hoppy_hour_sketch.png" width="300">
+
+### Screens
+
+
+ <table>
+  <tr>
+    <td>Splash Screen</td>
+     <td>List Screen with paging</td>
+     <td>Details Screen</td>
+  </tr>
+  <tr>
+    <td><img src="./Screenshots/Screenshot_1594032244.png" width=250 height=480></td>
+    <td><img src="./Screenshots/Screenshot_1594032022.png" width=250 height=480></td>
+    <td><img src="./Screenshots/Screenshot_1594032232.png" width=250 height=480></td>
+  </tr>
+ </table>
 
 ## Requirements
 *   [Android Studio 3.0](https://developer.android.com/studio) and above.
