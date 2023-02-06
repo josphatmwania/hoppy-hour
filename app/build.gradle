@@ -27,6 +27,7 @@ android {
                         "room.expandProjection":"true"]
             }
         }
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
