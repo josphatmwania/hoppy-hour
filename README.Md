@@ -41,15 +41,19 @@ I built this app using with Kotlin and implementing Clean Architecture, Coroutin
 
 ## Features & Libraries
 * Implementation of android  Clean Architecture
-*  Display list with RecycleView and data binding with  Paging Library.
+* Display list with RecycleView and data binding with  Paging Library.
 * Managing of asynchronous calls using  Kotlin Coroutines.
 * View-Binding: Accessing xml views
+* HTTP logging interceptors: Log HTTP requests.
+* Glide: Image processing
+* Paging3: Pagination
+* Datastore:Key values
 * Hilt: Dependency Injection framework 
 * ViewModel: MVVM pattern component 
 * Kotlin-Coroutines-Flow: For asynchronous tasks, reactive programming 
 * Android Jetpack Navigation: Screen navigation 
-* Retrofit: REST Api client 
-* Room: SQL database storage library
+* Retrofit: REST Api client & HTTP requests
+* Room: SQL database storage library & Caching
 
 
 ## Support and contact details
