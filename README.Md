@@ -1,6 +1,6 @@
 # Hoppy Hour
 
-Do you want to grab some?
+Hi, Do you want to grab some?
 
 Hoppy Hour is an Android App that displays beer data from Punk API.
 
