@@ -27,9 +27,9 @@ I built this app using with Kotlin and implementing Clean Architecture, Coroutin
   <tr>
     <td><img src="./Screenshots/Screenshot_splash_screen.png" width=200 height=450></td>
     <td><img src="./Screenshots/Screenshot_onboarding_screen.png" width=200 height=450></td>
+    <td><img src="./Screenshots/Screenshot_list_of_beers.png" width=200 height=450></td>
+    <td><img src="./Screenshots/Screenshot_single_beer_screen.png" width=200 height=450></td>
 
-[comment]: <> (    <td><img src="./Screenshots/Screenshot_list_of_beers.png" width=200 height=450></td>)
-    <td><img src="./drawable/screenshot_single_beer_screen.png" width=200 height=450></td>
 
   </tr>
  </table>
