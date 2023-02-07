@@ -9,9 +9,4 @@
     <string name="beer_tagline">beer tagline</string>
     <string name="textview">TextView</string>
     <string name="retry">retry</string>
-    <string name="percentage_text">%</string>
-    <string name="description">Description</string>
-    <string name="ingredients">Ingredients</string>
-    <string name="food_pairing">Food Pairing</string>
-    <string name="brewers_tips">Brewers tips</string>
 </resources>
