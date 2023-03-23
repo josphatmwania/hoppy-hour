@@ -43,120 +43,46 @@ class SingleBeerFragment : Fragment() {
     private fun showEvent(event: BeerEvent?) {
         // use to add progressbar state
         if (event?.isLoading == true) {
-            // set visibility
-            loadingStateVisibility(binding)
+            binding.apply {
+                // set visibility
+                singleBeerProgressbar.visibility = View.VISIBLE
+                txvErrorMessage.visibility = View.GONE
+                imvBeer.visibility = View.GONE
+                txvName.visibility = View.GONE
+                txvAlcoholPercentage.visibility = View.GONE
+            }
         }
         // use to show error message
         if (event?.message != "") {
             binding.apply {
-                txvErrorMessage.text = event?.message
                 // set visibility
-                messageStateVisibility(this)
+                singleBeerProgressbar.visibility = View.GONE
+                txvErrorMessage.visibility = View.VISIBLE
+                txvErrorMessage.text = event?.message
+                imvBeer.visibility = View.GONE
+                txvName.visibility = View.GONE
+                txvAlcoholPercentage.visibility = View.GONE
             }
         }
         // use to display data
         if (event?.data != null) {
+            Log.d("TAG", "onViewCreated: ${event.data}")
             binding.apply {
                 // set visibility
-                dataStateVisibility(this)
+                singleBeerProgressbar.visibility = View.GONE
+                txvErrorMessage.visibility = View.GONE
+                imvBeer.visibility = View.VISIBLE
+                txvName.visibility = View.VISIBLE
+                txvAlcoholPercentage.visibility = View.VISIBLE
                 // set data
                 event.data?.let { beer ->
                     Glide.with(requireContext())
                         .load(beer.imageUrl)
                         .into(imvBeer)
                     txvName.text = beer.name
-                    txvAlcoholPercentage.text = buildString {
-                        append("%${beer.abv} alcohol")
-                    }
-                    txvTagline.text = buildString {
-                        append("Tagline: ${beer.tagline}")
-                    }
-                    txvDescription.text = beer.description
-                    txvIngredients.text = buildString {
-                        append("MALT - ")
-                        beer.ingredients.malt.forEach { malt ->
-                            append("${malt.name} ${malt.amount.value} ${malt.amount.unit}, ")
-                        }
-                        append("\n\n")
-                        append("HOPS - ")
-                        beer.ingredients.hops.forEach { hops ->
-                            append("${hops.name} ${hops.amount.value} ${hops.amount.unit}, ")
-                        }
-                    }
-                    txvFoodPairing.text = buildString {
-                        beer.foodPairing.forEach { foodPairing ->
-                            append("$foodPairing, ")
-                        }
-                    }
-                    txvBrewersTips.text = beer.brewersTips
+                    txvAlcoholPercentage.text = beer.abv.toString()
                 }
             }
-        }
-    }
-
-    /**
-     * handles visibility status when loading
-     */
-    private fun loadingStateVisibility(binding: FragmentSingleBeerBinding) {
-        binding.apply {
-            singleBeerProgressbar.visibility = View.VISIBLE
-            txvErrorMessage.visibility = View.GONE
-            imvBeer.visibility = View.GONE
-            txvName.visibility = View.GONE
-            txvAlcoholPercentage.visibility = View.GONE
-            txvTagline.visibility = View.GONE
-            txvDescriptionTitle.visibility = View.GONE
-            txvDescription.visibility = View.GONE
-            txvIngredientsTitle.visibility = View.GONE
-            txvIngredients.visibility = View.GONE
-            txvFoodPairingTitle.visibility = View.GONE
-            txvFoodPairing.visibility = View.GONE
-            txvBrewersTipsTitle.visibility = View.GONE
-            txvBrewersTips.visibility = View.GONE
-        }
-    }
-
-    /**
-     * handles visibility status when there is a network error
-     */
-    private fun messageStateVisibility(binding: FragmentSingleBeerBinding) {
-        binding.apply {
-            singleBeerProgressbar.visibility = View.GONE
-            txvErrorMessage.visibility = View.VISIBLE
-            imvBeer.visibility = View.GONE
-            txvName.visibility = View.GONE
-            txvAlcoholPercentage.visibility = View.GONE
-            txvTagline.visibility = View.GONE
-            txvDescriptionTitle.visibility = View.GONE
-            txvDescription.visibility = View.GONE
-            txvIngredientsTitle.visibility = View.GONE
-            txvIngredients.visibility = View.GONE
-            txvFoodPairingTitle.visibility = View.GONE
-            txvFoodPairing.visibility = View.GONE
-            txvBrewersTipsTitle.visibility = View.GONE
-            txvBrewersTips.visibility = View.GONE
-        }
-    }
-
-    /**
-     * handles visibility status when data has loaded successfully
-     */
-    private fun dataStateVisibility(binding: FragmentSingleBeerBinding) {
-        binding.apply {
-            singleBeerProgressbar.visibility = View.GONE
-            txvErrorMessage.visibility = View.GONE
-            imvBeer.visibility = View.VISIBLE
-            txvName.visibility = View.VISIBLE
-            txvAlcoholPercentage.visibility = View.VISIBLE
-            txvTagline.visibility = View.VISIBLE
-            txvDescriptionTitle.visibility = View.VISIBLE
-            txvDescription.visibility = View.VISIBLE
-            txvIngredientsTitle.visibility = View.VISIBLE
-            txvIngredients.visibility = View.VISIBLE
-            txvFoodPairingTitle.visibility = View.VISIBLE
-            txvFoodPairing.visibility = View.VISIBLE
-            txvBrewersTipsTitle.visibility = View.VISIBLE
-            txvBrewersTips.visibility = View.VISIBLE
         }
     }
 
