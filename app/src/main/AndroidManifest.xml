@@ -29,6 +29,7 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:name=".feature_beer.presentation.ui.MainActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>

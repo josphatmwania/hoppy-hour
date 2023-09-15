@@ -64,7 +64,7 @@ class SingleBeerFragment : Fragment() {
                 txvAlcoholPercentage.visibility = View.GONE
             }
         }
-        // use to display data
+        // use Glide to display data
         if (event?.data != null) {
             Log.d("TAG", "onViewCreated: ${event.data}")
             binding.apply {
