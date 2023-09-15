@@ -1,11 +1,9 @@
 package com.josphatmwania.hoppyhour.di
 
 import android.content.Context
-import androidx.room.Room
 import com.josphatmwania.hoppyhour.common.Constants
 import com.josphatmwania.hoppyhour.common.SettingsDatastore
 import com.josphatmwania.hoppyhour.common.UseCases
-import com.josphatmwania.hoppyhour.feature_beer.data.datasource.local.HoppyHourDatabase
 import com.josphatmwania.hoppyhour.feature_beer.data.datasource.remote.PunkApiService
 import com.josphatmwania.hoppyhour.feature_beer.domain.repository.HoppyHourRepository
 import com.josphatmwania.hoppyhour.feature_beer.domain.use_case.AllBeers
@@ -60,21 +58,6 @@ object AppModule {
     fun providePunkApiService(retrofit: Retrofit): PunkApiService {
         return retrofit.create(PunkApiService::class.java)
     }
-
-    @Provides
-    @Singleton
-    fun provideHoppyHourDatabase(@ApplicationContext context: Context): HoppyHourDatabase {
-        return Room.databaseBuilder(
-            context.applicationContext,
-            HoppyHourDatabase::class.java,
-            Constants.DATABASE_NAME
-        ).build()
-    }
-
-    @Provides
-    @Singleton
-    fun provideHoppyHourDao(database: HoppyHourDatabase) = database.dao()
-
     @Provides
     fun provideALlBeersUseCase(repository: HoppyHourRepository) = AllBeers(repository)
 
