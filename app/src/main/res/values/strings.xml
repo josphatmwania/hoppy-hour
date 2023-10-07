@@ -14,4 +14,6 @@
     <string name="ingredients">Ingredients</string>
     <string name="food_pairing">Food Pairing</string>
     <string name="brewers_tips">Brewers tips</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
