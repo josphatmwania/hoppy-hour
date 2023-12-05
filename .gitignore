@@ -13,5 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-test/
-androidTest/
+androidTest/* merge=ours
+Test/* merge=ours

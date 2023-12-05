@@ -1,0 +1,3 @@
+# Exclude androidTest and Test folders during merge
+androidTest/* merge=ours
+Test/* merge=ours
