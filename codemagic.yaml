@@ -14,4 +14,4 @@ workflows:
         recipients:
           - josphat@gror.io
           - josphatmwania237@gmail.com
-          - collins@gror.io
+#          - collins@gror.io
