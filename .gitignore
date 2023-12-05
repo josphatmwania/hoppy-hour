@@ -13,5 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-/.androidTest
-/.Test
+#/.androidTest
+#/.Test
